@@ -1,8 +1,8 @@
 from openai import OpenAI
 import os
 
-def generate_response_new(input_Text):
 
+def generate_response_new(input_Text):
     result = ''
     try:
         os.environ['OPENAI_API_KEY'] = 'your-openai-api-key'
@@ -25,6 +25,7 @@ def generate_response_new(input_Text):
 
 
 if __name__ == '__main__':
-    input_text = ("From the below content, extract the name of the product and the price. Then only print fully analyzed name of the product, not the abbreviation and price.:"
+    input_text = ("From the below content, extract the name of the product and the price. Then only print fully "
+                  "analyzed name of the product, not the abbreviation and price.:"
                   "GTAV is available for $10 now.")
     generate_response_new(input_text)

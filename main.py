@@ -20,11 +20,6 @@ class TextTransferApp:
         response = requests.get(image_url)
         image_data = BytesIO(response.content)
 
-
-
-
-
-
         self.background_image = Image.open(image_data)
         self.background_image = self.background_image.resize((700, 600),
                                                              Image.Resampling.LANCZOS)  # Adjust size using new 
